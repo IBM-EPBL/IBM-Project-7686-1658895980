@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Hospital</title>
+<link href="../static/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+<body class="body">
+  
+  <!-- Fixed Nav Bar-->
+  <div class="navbar fixed-top row bg-dark">
+    <div class="px-3 col-sm-3  text-white">
+      <h1 class="">Hospital</h1>
+    </div>
+   <div class="col-sm-9 m-auto align-items-center text-end text-white">
+    <a class="px-0 navbar-brand text-white" href="#">
+      <i class="fa-solid fa-house"></i>
+      </i>
+      Home
+    </a>
+    <a class="px-0 navbar-brand text-white" href="#">
+      <i class="fa-solid fa-sign-in "></i>
+      Sign in</a>
+    <a class="px-0 navbar-brand text-white" href="#">
+      <i class="fa-solid  fa-user-plus"></i>
+      Sign up</a>
+    <a class="px-0 navbar-brand text-white" href="#">
+      <i class="fa-solid fa-circle-info px-1"></i>About</a>
+   </div>
+   </div>
+<div style="overflow:hidden" >
+  <img class="py-5" src="../static/HomeImage.jpg" style="overflow:hidden;" />
+
+</div>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "2d044b92-023d-4987-95b1-17d700546d4a", // The ID of this integration.
+    region: "jp-tok", // The region your integration is hosted in.
+    serviceInstanceID: "1e45b316-4478-47ea-954e-6548b7dc66ae", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+</html>

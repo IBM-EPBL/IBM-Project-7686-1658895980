@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cloudimage.s3.jp-tok.cloud-object-storage.appdomain.cloud/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Cloud-Storage</title>
+  </head>
+  <body style="background-color:#8583f7;">
+    <h1 class="Center">Assignment-3</h1>
+    <br>
+    <h1 class="Center">Images from cloud</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col py-3">
+          <div class="card" style="width: 19rem;">
+          <img
+            src="https://cloudimage.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[0]}}"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">{{files[0]}}</p>
+          </div>
+        </div>
+        </div>
+        <div class="col py-2">
+          <div class="card" style="width: 19rem;">
+          <img
+            src="https://cloudimage.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[1]}}"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">{{files[1]}}</p>
+          </div>
+        </div>
+        </div>
+        <div class="col py-2">
+          <div class="card" style="width: 19rem;">
+          <img
+            src="https://cloudimage.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[2]}}"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">{{files[2]}}</p>
+          </div>
+        </div>
+        </div>
+        <br>
+        <div class="col py-2">
+          <div class="card" style="width: 19rem;">
+          <img
+            src="https://cloudimage.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[3]}}"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">{{files[3]}}</p>
+          </div>
+        </div>
+        </div>
+        <div class="col py-2">
+          <div class="card" style="width: 19rem;">
+          <img
+            src="https://cloudimage.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[4]}}"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">{{files[4]}}</p>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </body>
+</html>
