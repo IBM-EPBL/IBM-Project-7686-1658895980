@@ -1,0 +1,30 @@
+{% extends "_Layout.html" %}
+{% block body %}
+
+<div class="p-5">
+    <form class="center" action='{{url_for("login")}}' method="post">
+  <div class="shadow-lg p-5 bg-white rounded">
+    <label class="py-2" style="font-weight:500;font-size:xx-large;">Sign in</label>
+  <div class="form-group">
+  <label >UserName</label>
+  <br>
+  <input class="form-control" type="text" name="uname" placeholder="Enter username"/>
+  <br>
+  <label>Password</label>
+  <br>
+  <input class="form-control" type="password" name="pass" placeholder="Enter password"/>
+  <br>
+  <input type="submit" value="Login"  class="btn btn-primary mb-4" style="width:100%"/>
+  <span class="form-control">
+    <center>
+     Don't have an account? &nbsp;
+      <a href="/register">register</a>
+    </center>
+   </span>  
+</div>
+  
+  
+  </form>
+  </div>
+
+  {% endblock %}
