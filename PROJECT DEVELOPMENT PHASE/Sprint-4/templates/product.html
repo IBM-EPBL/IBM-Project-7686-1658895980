@@ -1,0 +1,111 @@
+{% extends "_DashboardLayout.html" %}
+{% block body %}
+
+<div class="py-5">
+  <h2  style="font-weight: 700;">Product</h2>
+    <center class="py-5">
+        
+        <div class="p-3 text-end">
+         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add Product</button>
+        </div>
+
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h4 class="modal-title">Product Details</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+
+              <div class="modal-body">
+                <form class="center" action='{{url_for("product")}}' method="post">
+                  <div class="shadow-lg p-5 bg-white rounded">
+                  <div class="form-group text-start">
+                  <label >Product ID</label>
+                  <br>
+                  <input class="form-control" type="number" name="pid" placeholder="Enter Product ID"/>
+                  <br>
+                  <label>Product Name</label>
+                  <br>
+                  <input class="form-control" type="text" name="pname" placeholder="Enter Product Name"/>
+                  <br>
+                  <label>Rate</label>
+                  <br>
+                  <input class="form-control" type="text" name="rate" placeholder="Enter Rate"/>
+                  <br>
+                  <label>Quantity</label>
+                  <br>
+                  <input class="form-control" type="number" name="quantity" placeholder="Enter Quantity"/>
+                  <br>
+                  <label>Brand</label>
+                  <br>
+                  <input class="form-control" type="text" name="brand" placeholder="Enter Brand"/>
+                  <br>
+                  <label>Category</label>
+                  <br>
+                  <input class="form-control" type="text" name="category" placeholder="Enter Category"/>
+                  <br>
+                  <label>Image</label>
+                  <br>
+                  <input class="form-control" type="file" name="img"/>
+                  <br>
+                  
+                  <input type="submit" value="Add"  class="btn btn-primary mb-4" style="width:100%"/> 
+                </div>
+                </div>
+
+            </form>
+              </div>
+
+              </div>
+              </div>
+              </div>
+            
+
+
+            
+
+            <table class="table">
+                <thead class="table-dark">
+                    <tr class="text-center">
+                        <th scope="col">#</th>
+                        <th scope="col">Product ID</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Rate</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                  {% for item in items %}
+                    <tr>
+                      <!-- # -->
+                      <td> {{items.index(item) + 1}} </td>
+                      <!-- Product ID -->
+                      <td> {{item['PRODUCTID']}} </td>
+                      <!-- Product Name -->
+                      <td> {{item['PRODUCTNAME']}} </td>
+                      <!-- Rate -->
+                      <td> {{item['RATE']}} </td>
+                      <!-- Quantity -->
+                      <td> {{item['QUANTITY']}} </td>
+                      <!-- Brand -->
+                      <td> {{item['BRAND']}} </td>
+                      <!-- Category -->
+                      <td> {{item['CATEGORY']}} </td>
+                      <!-- Status -->
+                      <td> {{item['STATUS']}} </td>
+                    </tr>
+                   {% endfor %}
+                </tbody>
+               
+            </table>
+        
+    </center>
+</div>
+
+
+{% endblock %}
